@@ -17,3 +17,4 @@ N/A
 It should be something like O(c*n) where c is some constant. for each n there is a loop to insert it in the heap, a loop to bubble up, and a loop to insert it into the sorted list.
 
 6. What is the space complexity of the `heapsort` function? Recall that your implementation should return a new array with the sorted data. What would be the space complexity if your function instead altered the input array?
+I'm not sure but I think it's something like (c*n) because we have to create a new heap and a new sorted list each time.
