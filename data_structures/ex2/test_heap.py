@@ -10,7 +10,7 @@ def gen_random_input(length, max):
 
 def is_sorted(arr):
   for i in range(len(arr) - 1):
-    if arr[i] > arr[i+1]:
+    if arr[i] > arr[i+1]: # looking for a min sort aka smallest first
       return False
   return True
 
