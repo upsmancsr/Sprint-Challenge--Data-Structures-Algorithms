@@ -8,7 +8,15 @@ class BinarySearchTree:
   # execute the anonymous function on each node in the tree in depth-first order
   # anonymous functions are "lambda functions" so define them as such
   def depth_first_for_each(self, cb):
-    some code
+    if self.value:
+      cb(self.value)
+      if self.left:
+        self.left.depth_first_for_each(cb)
+      if self.right:
+        self.right.depth_first_for_each(cb)
+      
+    
+
 
   def breadth_first_for_each(self, cb):
     pass
