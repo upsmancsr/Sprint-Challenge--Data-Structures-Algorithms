@@ -1,11 +1,15 @@
 from random import randint
 
 def heapsort(arr):
-  heap = Heap() # create a new empty heap
-  for i in range(len(arr) - 1): #Loop through input arr and insert each value into the heap
-    heap.insert(arr[i]) # insert includes _bubble_up
-  
-  return heap
+  heap = Heap()                 # create a new empty heap
+  sorted_list = [0] * len(arr)
+
+  for i in range(len(arr)):     # Loop through input arr and insert each value into the heap
+    heap.insert(arr[i])         # insert includes _bubble_up
+  for i in range(len(arr)):
+    sorted_list[len(arr) - i - 1] = heap.delete()  # call delete and store the deleted item in sorted_list
+  return sorted_list
+
  
 class Heap:
   def __init__(self):
